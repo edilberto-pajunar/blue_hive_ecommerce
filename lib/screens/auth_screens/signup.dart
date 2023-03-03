@@ -1,10 +1,13 @@
 import 'package:blue_hive_ecommerce/constants/global_variable.dart';
+import 'package:blue_hive_ecommerce/screens/home/main_screen.dart';
 import 'package:blue_hive_ecommerce/service/auth_service.dart';
 import 'package:blue_hive_ecommerce/utils/primary_button_lg.dart';
 import 'package:blue_hive_ecommerce/utils/reusable_form.dart';
 import 'package:blue_hive_ecommerce/utils/snackbar.dart';
 import 'package:blue_hive_ecommerce/screens/auth_screens/login.dart';
 import 'package:flutter/material.dart';
+
+import '../home/page_view.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -38,9 +41,13 @@ class _SignupState extends State<Signup> {
       _isLoading = true;
     });
     String res = await AuthService().signUpUser(
-        name: _nameController.text,
-        email: _emailController.text,
-        password: _passwordController.text);
+      name: _nameController.text,
+      email: _emailController.text,
+      password: _passwordController.text,
+    );
+
+    Navigator.of(context)
+        .pushReplacement(MaterialPageRoute(builder: (context) => Page_View()));
     print(res);
 
     setState(() {
