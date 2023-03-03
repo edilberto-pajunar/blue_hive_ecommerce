@@ -69,6 +69,12 @@ class ProfileScreen extends StatelessWidget {
                     );
                   }),
             ),
+            Center(
+              child: ElevatedButton(
+                onPressed: AuthService().signOut,
+                child: Text("Logout"),
+              ),
+            ),
           ],
         ),
       ),

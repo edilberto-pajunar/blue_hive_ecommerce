@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '../constants/global_variable.dart';
 
 class NewProductTile extends StatelessWidget {
+  final String image;
   final Function()? onTap;
-  const NewProductTile({super.key, required this.onTap});
+  const NewProductTile({super.key, required this.onTap, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class NewProductTile extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage(tNewProduct),
+              image: AssetImage(image),
             ),
             color: Colors.grey,
           ),

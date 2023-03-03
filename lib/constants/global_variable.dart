@@ -4,8 +4,15 @@ import 'package:flutter/material.dart';
 const String tSplashLogo = "assets/images/splash_logo.jpg";
 const String tMainImage = "assets/images/main_image.jpg";
 const String tNewProduct = "assets/images/new_product.jpg";
+const String tNewProduct2 = "assets/images/new_product_2.jpg";
+const String tNewProduct3 = "assets/images/new_product_3.jpg";
+const String tNewProduct4 = "assets/images/new_product_4.jpg";
 const String tNewCategoryWomen = "assets/images/new_category_women.jpg";
+const String tNewCategoryWomen2 = "assets/images/new_category_women_2.jpg";
+const String tNewCategoryWomen3 = "assets/images/new_category_women_3.jpg";
 const String tNewCategoryMen = "assets/images/new_category_men.jpg";
+const String tNewCategoryMen2 = "assets/images/new_category_men_2.jpg";
+const String tNewCategoryMen3 = "assets/images/new_category_men_3.jpg";
 const String tNewCategoryKid = "assets/images/new_category_kid.jpg";
 
 // constant for colors

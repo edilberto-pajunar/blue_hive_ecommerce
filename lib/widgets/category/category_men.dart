@@ -11,11 +11,11 @@ class CategoryMen extends StatelessWidget {
     ],
     [
       "Clothes",
-      tNewCategoryMen,
+      tNewCategoryMen2,
     ],
     [
       "Shoes",
-      tNewCategoryMen,
+      tNewCategoryMen3,
     ],
     [
       "Accessories",

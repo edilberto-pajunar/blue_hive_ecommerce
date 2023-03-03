@@ -8,13 +8,6 @@ import '../../models/cart.dart';
 class BagScreen extends StatelessWidget {
   BagScreen({super.key});
 
-  List _myBagList = [
-    [tNewCategoryWomen, "PullOver", 1, 51],
-    [tNewCategoryWomen, "PullOver", 1, 51],
-    [tNewCategoryWomen, "PullOver", 1, 51],
-    [tNewCategoryWomen, "PullOver", 1, 51],
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

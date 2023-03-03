@@ -6,9 +6,9 @@ class CartModel extends ChangeNotifier {
   final List _shopItems = [
     // [itemName, itemPrice, imagePath, color]
     ["Top", "4.00", tNewCategoryWomen, tGray],
-    ["Jacket", "4.00", tNewCategoryWomen, tGray],
-    ["Polo", "4.00", tNewCategoryWomen, tGray],
-    ["Crop Top", "4.00", tNewCategoryWomen, tGray],
+    ["Jacket", "4.00", tNewCategoryWomen3, tGray],
+    ["Polo", "4.00", tNewCategoryWomen2, tGray],
+    ["Crop Top", "4.00", tNewCategoryKid, tGray],
   ];
 
   get shopItems => _shopItems;

@@ -10,9 +10,9 @@ class MainScreen extends StatelessWidget {
 
   List _newProduct = [
     tNewProduct,
-    tNewProduct,
-    tNewProduct,
-    tNewProduct,
+    tNewProduct2,
+    tNewProduct3,
+    tNewProduct4,
   ];
 
   @override
@@ -99,6 +99,7 @@ class MainScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: ((context, index) {
                     return NewProductTile(
+                      image: _newProduct[index],
                       onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) => Product())),
                     );
