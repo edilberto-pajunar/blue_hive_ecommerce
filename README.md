@@ -25,5 +25,5 @@ How to Run:
 
 Sample Image:
 ![image](https://user-images.githubusercontent.com/110841351/222724765-3da951c9-de73-4fc8-a9b3-9646522fd9c9.png)
-![image](https://user-images.githubusercontent.com/110841351/222724789-0cceb76f-832f-4a79-b2cc-66688d467b18.png)
+![image](https://user-images.githubusercontent.com/110841351/222724944-59c16685-611e-45de-9d19-ea6c7224d8bd.png)
 ![image](https://user-images.githubusercontent.com/110841351/222724803-140c8d2a-b654-4c6b-995f-41c1658e4620.png)
