@@ -1,10 +1,11 @@
 import 'package:blue_hive_ecommerce/constants/global_variable.dart';
 import 'package:blue_hive_ecommerce/widgets/category/category_kids.dart';
 import 'package:blue_hive_ecommerce/widgets/category/category_men.dart';
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../widgets/category/category_women.dart';
+import '../../widgets/category/category_women.dart';
 
 class ShopScreen extends StatefulWidget {
   const ShopScreen({super.key});
@@ -30,10 +31,6 @@ class _ShopScreenState extends State<ShopScreen> {
         backgroundColor: tGray.withOpacity(0.3),
         appBar: AppBar(
           backgroundColor: tBackground,
-          leading: const Icon(
-            Icons.arrow_back,
-            color: tBlack,
-          ),
           title: const Text(
             "Categories",
             style: TextStyle(
@@ -87,4 +84,6 @@ class _ShopScreenState extends State<ShopScreen> {
       ),
     );
   }
+
+  
 }

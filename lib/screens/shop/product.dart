@@ -1,5 +1,5 @@
 import 'package:blue_hive_ecommerce/constants/global_variable.dart';
-import 'package:blue_hive_ecommerce/screens/bag_screen.dart';
+import 'package:blue_hive_ecommerce/screens/bag/bag_screen.dart';
 import 'package:blue_hive_ecommerce/utils/primary_button_lg.dart';
 import 'package:blue_hive_ecommerce/utils/primary_button_sm.dart';
 import 'package:blue_hive_ecommerce/utils/select_size_tile.dart';
@@ -112,8 +112,9 @@ class _ProductState extends State<Product> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: tBackground,
-        leading: Icon(
-          Icons.arrow_back,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
           color: tBlack,
         ),
         title: Text(

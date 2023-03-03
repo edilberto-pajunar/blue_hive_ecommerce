@@ -1,5 +1,5 @@
 import 'package:blue_hive_ecommerce/constants/global_variable.dart';
-import 'package:blue_hive_ecommerce/screens/main.dart';
+import 'package:blue_hive_ecommerce/screens/home/page_view.dart';
 import 'package:blue_hive_ecommerce/service/auth_service.dart';
 import 'package:blue_hive_ecommerce/utils/primary_button_lg.dart';
 import 'package:blue_hive_ecommerce/utils/reusable_form.dart';
@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
         email: _emailController.text, password: _passwordController.text);
 
     if (res == "success") {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Main()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Page_View()));
     } else {
       showSnackBar(res, context);
     }

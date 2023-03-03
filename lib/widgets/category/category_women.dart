@@ -1,5 +1,5 @@
 import 'package:blue_hive_ecommerce/constants/global_variable.dart';
-import 'package:blue_hive_ecommerce/screens/products_screen.dart';
+import 'package:blue_hive_ecommerce/screens/shop/products_screen.dart';
 import 'package:flutter/material.dart';
 
 class CategoryWomen extends StatelessWidget {

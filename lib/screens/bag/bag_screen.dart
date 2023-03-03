@@ -1,6 +1,9 @@
 import 'package:blue_hive_ecommerce/constants/global_variable.dart';
 import 'package:blue_hive_ecommerce/utils/primary_button_lg.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../models/cart.dart';
 
 class BagScreen extends StatelessWidget {
   BagScreen({super.key});
@@ -44,42 +47,76 @@ class BagScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Expanded(
-              child: ListView.builder(
-                  itemCount: _myBagList.length,
-                  itemBuilder: (context, index) {
-                    return MyBagTile(
-                      image: _myBagList[index][0],
-                      name: _myBagList[index][1],
-                      quantity: _myBagList[index][2],
-                      cost: _myBagList[index][3],
-                    );
-                  }),
+            Consumer<CartModel>(
+              builder: ((context, value, child) {
+                return Expanded(
+                  child: ListView.builder(
+                      itemCount: value.cartItems.length,
+                      itemBuilder: (context, index) {
+                        // return MyBagTile(
+                        //   image: _myBagList[index][0],
+                        //   name: _myBagList[index][1],
+                        //   quantity: _myBagList[index][2],
+                        //   cost: _myBagList[index][3],
+                        // );
+                        return Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                ),
+                                child: ListTile(
+                                  leading:
+                                      Image.asset(value.cartItems[index][2]),
+                                  title: Text(value.cartItems[index][0]),
+                                  subtitle:
+                                      Text("\$" + value.cartItems[index][1]),
+                                  trailing: IconButton(
+                                    icon: Icon(Icons.cancel),
+                                    onPressed: () => Provider.of<CartModel>(
+                                            context,
+                                            listen: false)
+                                        .removeItemFromCart(index),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      }),
+                );
+              }),
             ),
             SizedBox(
               height: 100,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Consumer<CartModel>(
+                builder: ((context, value, child) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text(
-                        "Total amount:",
-                        style: TextStyle(
-                          color: tGray,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Total amount:",
+                            style: TextStyle(
+                              color: tGray,
+                            ),
+                          ),
+                          Text(
+                            (value.calculateTotal()),
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                      Text(
-                        "124\$",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      PrimaryButtonLg(label: "Check Out", onPressed: () {}),
                     ],
-                  ),
-                  PrimaryButtonLg(label: "Check Out", onPressed: () {}),
-                ],
+                  );
+                }),
               ),
             ),
           ],

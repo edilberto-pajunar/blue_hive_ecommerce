@@ -1,33 +1,33 @@
 import 'package:blue_hive_ecommerce/constants/global_variable.dart';
 import 'package:blue_hive_ecommerce/models/user.dart' as model;
 import 'package:blue_hive_ecommerce/provider/user_provider.dart';
-import 'package:blue_hive_ecommerce/screens/favorites.dart';
-import 'package:blue_hive_ecommerce/screens/main_screen.dart';
-import 'package:blue_hive_ecommerce/screens/profile.dart';
-import 'package:blue_hive_ecommerce/screens/shop_screen.dart';
+import 'package:blue_hive_ecommerce/screens/favorite/favorite_screen.dart';
+import 'package:blue_hive_ecommerce/screens/home/main_screen.dart';
+import 'package:blue_hive_ecommerce/screens/profile/profile.dart';
+import 'package:blue_hive_ecommerce/screens/shop/shop_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../utils/primary_button_sm.dart';
-import 'bag_screen.dart';
+import '../../utils/primary_button_sm.dart';
+import '../bag/bag_screen.dart';
 
-class Main extends StatefulWidget {
-  Main({super.key});
+class Page_View extends StatefulWidget {
+  Page_View({super.key});
 
   @override
-  State<Main> createState() => _MainState();
+  State<Page_View> createState() => _Page_ViewState();
 }
 
-class _MainState extends State<Main> {
+class _Page_ViewState extends State<Page_View> {
   final screens = [
     MainScreen(),
     ShopScreen(),
     BagScreen(),
-    Favorites(),
-    Profile(),
+    FavoriteScreen(),
+    ProfileScreen(),
   ];
-  int index = 1;
+  int index = 0;
 
   @override
   void initState() {
