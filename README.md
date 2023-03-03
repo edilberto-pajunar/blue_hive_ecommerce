@@ -1,6 +1,6 @@
 # blue_hive_ecommerce
 
-A new Flutter project.
+An e-commerce technical exam from blue hive.
 
 ## Getting Started
 
@@ -14,3 +14,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+How to Run:
+1. Install Flutter in your pc.
+2. Install VSCode.
+3. git clone "https://github.com/eunhachingu/blue_hive_ecommerce.git"
+4. locate the file location
+5. flutter run
